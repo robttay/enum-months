@@ -1,5 +1,8 @@
 package com.example.common;
 
+
+import org.apache.commons.lang.StringUtils;
+
 public enum Month {
 
     JANUARY,
@@ -15,14 +18,16 @@ public enum Month {
     NOVEMBER,
     DECEMBER;
 
+    private String englishName;
 
-    public String getEnglishname() {
-        return englishname;
+    public String getEnglishName() {
+        return englishName;
     }
 
-    public void setEnglishname(String englishname) {
-        this.englishname = englishname;
-    }
 
-    private  String englishname;
+    Month() {
+        this.englishName = this.toString().substring(0, 1).toUpperCase() + this.toString().toLowerCase().substring(1);
+
+
+    }
 }

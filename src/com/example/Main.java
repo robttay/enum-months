@@ -30,27 +30,40 @@ public class Main {
         Month selectedMonth = null;
         try {
             selectedMonth = Month.valueOf(input.nextLine().toUpperCase());
-        }
-        catch (IllegalArgumentException e) {
+
+
+        } catch (IllegalArgumentException e) {
             System.out.println("Please enter a month listed.");
             System.exit(0);
         }
-        ArrayList<Month> monthList = new ArrayList();
+        ArrayList<String> monthList = new ArrayList();
 
         switch (selectedMonth) {
-            case JANUARY: monthList.add(JANUARY);
-            case FEBRUARY: monthList.add(FEBRUARY);
-            case MARCH: monthList.add(MARCH);
-            case APRIL: monthList.add(APRIL);
-            case MAY: monthList.add(MAY);
-            case JUNE: monthList.add(JUNE);
-            case JULY: monthList.add(JULY);
-            case AUGUST: monthList.add(AUGUST);
-            case SEPTEMBER: monthList.add(SEPTEMBER);
-            case OCTOBER: monthList.add(OCTOBER);
-            case NOVEMBER: monthList.add(NOVEMBER);
-            case DECEMBER: monthList.add(DECEMBER);
-            break;
+            case JANUARY:
+                monthList.add(Month.JANUARY.getEnglishName());
+            case FEBRUARY:
+                monthList.add(Month.FEBRUARY.getEnglishName());
+            case MARCH:
+                monthList.add(Month.MARCH.getEnglishName());
+            case APRIL:
+                monthList.add(Month.APRIL.getEnglishName());
+            case MAY:
+                monthList.add(Month.MAY.getEnglishName());
+            case JUNE:
+                monthList.add(Month.JUNE.getEnglishName());
+            case JULY:
+                monthList.add(Month.JULY.getEnglishName());
+            case AUGUST:
+                monthList.add(Month.AUGUST.getEnglishName());
+            case SEPTEMBER:
+                monthList.add(Month.SEPTEMBER.getEnglishName());
+            case OCTOBER:
+                monthList.add(Month.OCTOBER.getEnglishName());
+            case NOVEMBER:
+                monthList.add(Month.NOVEMBER.getEnglishName());
+            case DECEMBER:
+                monthList.add(Month.DECEMBER.getEnglishName());
+                break;
         }
 
         System.out.println(monthList);
